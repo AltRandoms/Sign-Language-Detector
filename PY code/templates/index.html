@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Language Detector</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+      color: #f57520;
+    }
+
+    p.subtitle {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .video-wrapper {
+      border: 3px solid #f57520;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(245, 117, 32, 0.3);
+    }
+
+    .video-wrapper img {
+      display: block;
+      width: 640px;
+      height: auto;
+    }
+
+    .legend {
+      margin-top: 18px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 0.8rem;
+      color: #aaa;
+      text-align: center;
+      border: 1px solid #2a2a2a;
+    }
+
+    .legend span {
+      color: #f57520;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ASL Sign Language Detector</h1>
+  <p class="subtitle">Place your hand in the white box to detect a sign</p>
+
+  <div class="video-wrapper">
+    <img src="/video_feed" alt="Live Feed" />
+  </div>
+
+  <div class="legend">
+    <span>Orange bar</span> = detected letter &nbsp;|&nbsp;
+    Place hand in <span>white box</span> &nbsp;|&nbsp;
+    Press <span>Ctrl+C</span> in terminal to stop
+  </div>
+
+</body>
+</html>
